@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+
+</head>
+<body> 
+	<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="user_icon.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="username" class="fadeIn second" name="login" placeholder="Username">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
+      <input type="submit" onclick="myFunction()" class="fadeIn fourth" value="Login">
+    </form>
+
+
+<script>
+function myFunction() {
+ var user = "ucu";
+ var pass = "admin";
+
+ username = document.getElementById('username').value;
+ password = document.getElementById('password').value;
+
+ 	if (user == username && pass == password) {
+ 		alert("Access Granted!");
+ 	}
+
+    else if (user == username && pass != password ) {
+ 	 alert("Invalid Password!");
+  }
+
+	else if (pass == password && user != username){
+ 	 	alert("Invalid Username!");
+ 	 }
+
+ 	 else{
+ 	 	alert("Access Denied!");
+ 	 }
+}
+</script>
+
+
+   
+
+  </div>
+</div>
+</form>
+</body>
+</html>
